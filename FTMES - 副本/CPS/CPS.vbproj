@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD5B16E0-9801-4146-A4DB-90F5F4440D55}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CPS.My.MyApplication</StartupObject>
+    <RootNamespace>CPS</RootNamespace>
+    <AssemblyName>CPMES</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.4.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CPMES.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CPMES.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cpmes02.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="unvell.ReoGrid">
+      <HintPath>C:\Users\thinkpad\Downloads\ReoGrid-2.1.0.0-Release\unvell.ReoGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="frmCheckOutBasic.Designer.vb">
+      <DependentUpon>frmCheckOutBasic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckOutBasic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckOutCP.Designer.vb">
+      <DependentUpon>frmCheckOutCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckOutCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckOutQC.Designer.vb">
+      <DependentUpon>frmCheckOutQC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckOutQC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHold.Designer.vb">
+      <DependentUpon>frmHold.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHold.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHoldSet.Designer.vb">
+      <DependentUpon>frmHoldSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHoldSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLabel.Designer.vb">
+      <DependentUpon>frmLabel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLabel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdMonitor.Designer.vb">
+      <DependentUpon>frmProdMonitor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProdMonitor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRealLocation.Designer.vb">
+      <DependentUpon>frmRealLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRealLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRlsTable.Designer.vb">
+      <DependentUpon>frmRlsTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRlsTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShipping.Designer.vb">
+      <DependentUpon>frmShipping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmShipping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShippingSet.Designer.vb">
+      <DependentUpon>frmShippingSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmShippingSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplitLot.Designer.vb">
+      <DependentUpon>frmSplitLot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplitLot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtiCorrClose.Designer.vb">
+      <DependentUpon>frmUtiCorrClose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtiCorrClose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtiCorrOpen.Designer.vb">
+      <DependentUpon>frmUtiCorrOpen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtiCorrOpen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtiDownClose.Designer.vb">
+      <DependentUpon>frmUtiDownClose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtiDownClose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtiDownOpen.Designer.vb">
+      <DependentUpon>frmUtiDownOpen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtiDownOpen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtiRunClose.Designer.vb">
+      <DependentUpon>frmUtiRunClose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtiRunClose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtiRunOpen.Designer.vb">
+      <DependentUpon>frmUtiRunOpen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtiRunOpen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtiRunOVEN.Designer.vb">
+      <DependentUpon>frmUtiRunOVEN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtiRunOVEN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtiSetupClose.Designer.vb">
+      <DependentUpon>frmUtiSetupClose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtiSetupClose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtiSetupOpen.Designer.vb">
+      <DependentUpon>frmUtiSetupOpen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtiSetupOpen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtilization.Designer.vb">
+      <DependentUpon>frmUtilization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtilization.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWaferOCR.Designer.vb">
+      <DependentUpon>frmWaferOCR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWaferOCR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MyChecksum.vb" />
+    <Compile Include="MyComModule.vb" />
+    <Compile Include="frmAccessory.Designer.vb">
+      <DependentUpon>frmAccessory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccessory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAssySet.Designer.vb">
+      <DependentUpon>frmAssySet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAssySet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckInBasic.Designer.vb">
+      <DependentUpon>frmCheckInBasic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckInBasic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckInCP.Designer.vb">
+      <DependentUpon>frmCheckInCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckInCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckInQC.Designer.vb">
+      <DependentUpon>frmCheckInQC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckInQC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckIO.Designer.vb">
+      <DependentUpon>frmCheckIO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckIO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCust.Designer.vb">
+      <DependentUpon>frmCust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCust.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustSet.Designer.vb">
+      <DependentUpon>frmCustSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee.Designer.vb">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmploySet.Designer.vb">
+      <DependentUpon>frmEmploySet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmploySet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEquipment.Designer.vb">
+      <DependentUpon>frmEquipment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEquipment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEquipset.Designer.vb">
+      <DependentUpon>frmEquipset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEquipset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFlowset.Designer.vb">
+      <DependentUpon>frmFlowset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFlowset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCPSMain.Designer.vb">
+      <DependentUpon>frmCPSMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCPSMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIncoming.Designer.vb">
+      <DependentUpon>frmIncoming.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIncoming.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIncomingset.Designer.vb">
+      <DependentUpon>frmIncomingset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIncomingset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIOrecord.Designer.vb">
+      <DependentUpon>frmIOrecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIOrecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIOset.Designer.vb">
+      <DependentUpon>frmIOset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIOset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOffline.Designer.vb">
+      <DependentUpon>frmOffline.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOffline.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOnline.Designer.vb">
+      <DependentUpon>frmOnline.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOnline.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPwd.Designer.vb">
+      <DependentUpon>frmPwd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPwd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTSprint.Designer.vb">
+      <DependentUpon>frmTSprint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTSprint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="frmProdset.Designer.vb">
+      <DependentUpon>frmProdset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProdset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduct.Designer.vb">
+      <DependentUpon>frmProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStepset.Designer.vb">
+      <DependentUpon>frmStepset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStepset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAccessory.resx">
+      <DependentUpon>frmAccessory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAssySet.resx">
+      <DependentUpon>frmAssySet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckInBasic.resx">
+      <DependentUpon>frmCheckInBasic.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckInCP.resx">
+      <DependentUpon>frmCheckInCP.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckInQC.resx">
+      <DependentUpon>frmCheckInQC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckIO.resx">
+      <DependentUpon>frmCheckIO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckOutBasic.resx">
+      <DependentUpon>frmCheckOutBasic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckOutCP.resx">
+      <DependentUpon>frmCheckOutCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckOutQC.resx">
+      <DependentUpon>frmCheckOutQC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCust.resx">
+      <DependentUpon>frmCust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustSet.resx">
+      <DependentUpon>frmCustSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee.resx">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmploySet.resx">
+      <DependentUpon>frmEmploySet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEquipment.resx">
+      <DependentUpon>frmEquipment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEquipset.resx">
+      <DependentUpon>frmEquipset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFlowset.resx">
+      <DependentUpon>frmFlowset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCPSMain.resx">
+      <DependentUpon>frmCPSMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHold.resx">
+      <DependentUpon>frmHold.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHoldSet.resx">
+      <DependentUpon>frmHoldSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIncoming.resx">
+      <DependentUpon>frmIncoming.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIncomingset.resx">
+      <DependentUpon>frmIncomingset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIOrecord.resx">
+      <DependentUpon>frmIOrecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIOset.resx">
+      <DependentUpon>frmIOset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLabel.resx">
+      <DependentUpon>frmLabel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOffline.resx">
+      <DependentUpon>frmOffline.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOnline.resx">
+      <DependentUpon>frmOnline.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProdMonitor.resx">
+      <DependentUpon>frmProdMonitor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPwd.resx">
+      <DependentUpon>frmPwd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRealLocation.resx">
+      <DependentUpon>frmRealLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRlsTable.resx">
+      <DependentUpon>frmRlsTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShipping.resx">
+      <DependentUpon>frmShipping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShippingSet.resx">
+      <DependentUpon>frmShippingSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplitLot.resx">
+      <DependentUpon>frmSplitLot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTSprint.resx">
+      <DependentUpon>frmTSprint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtiCorrClose.resx">
+      <DependentUpon>frmUtiCorrClose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtiCorrOpen.resx">
+      <DependentUpon>frmUtiCorrOpen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtiDownClose.resx">
+      <DependentUpon>frmUtiDownClose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtiDownOpen.resx">
+      <DependentUpon>frmUtiDownOpen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtiRunClose.resx">
+      <DependentUpon>frmUtiRunClose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtiRunOpen.resx">
+      <DependentUpon>frmUtiRunOpen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtiRunOVEN.resx">
+      <DependentUpon>frmUtiRunOVEN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtiSetupClose.resx">
+      <DependentUpon>frmUtiSetupClose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtiSetupOpen.resx">
+      <DependentUpon>frmUtiSetupOpen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtilization.resx">
+      <DependentUpon>frmUtilization.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWaferOCR.resx">
+      <DependentUpon>frmWaferOCR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProdset.resx">
+      <DependentUpon>frmProdset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStepset.resx">
+      <DependentUpon>frmStepset.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="22.ico" />
+    <Content Include="cpmes01.ico" />
+    <Content Include="cpmes02.ico" />
+    <None Include="Resources\change.png" />
+    <None Include="Resources\layout3.png" />
+    <None Include="Resources\layout1.png" />
+    <None Include="Resources\arrow_forward.png" />
+    <None Include="Resources\arrow_back.png" />
+    <None Include="Resources\tybg.png" />
+    <None Include="Resources\update.png" />
+    <None Include="Resources\release1.png" />
+    <None Include="Resources\release.png" />
+    <None Include="Resources\zpjy.png" />
+    <None Include="Resources\206.png" />
+    <None Include="Resources\cszp.png" />
+    <None Include="Resources\runcard1.png" />
+    <None Include="Resources\stepdefine1.png" />
+    <None Include="Resources\stepdefine2.png" />
+    <None Include="Resources\runcard.png" />
+    <None Include="Resources\stepdefine.png" />
+    <None Include="Resources\cpmes02.png" />
+    <None Include="Resources\cpmes01.png" />
+    <None Include="Resources\Inlabel1.png" />
+    <None Include="Resources\shipform1.png" />
+    <None Include="Resources\outlabel1.png" />
+    <None Include="Resources\outlabel.png" />
+    <None Include="Resources\shipform.png" />
+    <None Include="Resources\Inlabel.png" />
+    <None Include="Resources\layout2.png" />
+    <None Include="Resources\del2.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\read.png" />
+    <None Include="Resources\del.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\djly.png" />
+    <None Include="Resources\chxz.png" />
+    <None Include="Resources\zksh.png" />
+    <None Include="Resources\llsx.png" />
+    <None Include="Resources\xxrk.png" />
+    <None Include="Resources\csph.png" />
+    <None Include="Resources\shqr.png" />
+    <None Include="Resources\zankou.png" />
+    <None Include="Resources\gz.png" />
+    <None Include="Resources\cls.png" />
+    <None Include="Resources\all.png" />
+    <None Include="Resources\EXITnew.png" />
+    <None Include="Resources\OKnew.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\enable.png" />
+    <None Include="Resources\disable.png" />
+    <None Include="Resources\modify.png" />
+    <None Include="Resources\NEW.png" />
+    <None Include="Resources\query.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="BarTender">
+      <Guid>{D58562C1-E51B-11CF-8941-00A024A9083F}</Guid>
+      <VersionMajor>11</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Vbe.Interop.Forms">
+      <Guid>{0D452EE1-E08F-101A-852E-02608C4D0BB4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSComctlLib">
+      <Guid>{EFC412F4-F732-4631-993C-6F176A82877C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
